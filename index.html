@@ -4,23 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Daily Pages</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
-    
     <style>
-        /* Custom aesthetics */
         body {
-            /* Light cream/parchment background for a vintage feel */
             background-color: #fdfaf5; 
             background-image: url('https://www.transparenttextures.com/patterns/p6.png');
         }
-        
         .font-title { font-family: 'Playfair Display', serif; }
         .font-body { font-family: 'Lora', serif; }
-        
-        /* Vintage Polaroid card effect for past stories */
         .polaroid {
             background: white;
             padding: 10px 10px 40px 10px;
@@ -32,17 +24,10 @@
             transform: rotate(0deg) scale(1.02);
             box-shadow: 0 10px 15px rgba(0,0,0,0.1);
         }
-        .polaroid-alt {
-            transform: rotate(3deg);
-        }
-
-        /* Flower colors */
-        .flower-main { fill: #fecdd3; } /* Soft pink */
-        .flower-accent { fill: #fda4af; } /* Slightly darker pink */
-        .flower-stem { fill: #059669; } /* Green */
-        
-        /* Removes the ugly blue outline when you are typing */
-        [contenteditable]:focus { outline: none; }
+        .polaroid-alt { transform: rotate(3deg); }
+        .flower-main { fill: #fecdd3; } 
+        .flower-accent { fill: #fda4af; } 
+        .flower-stem { fill: #059669; } 
     </style>
 </head>
 <body class="min-h-screen text-gray-800 font-body p-4 md:p-8">
@@ -54,7 +39,6 @@
         </header>
 
         <article class="bg-white rounded-sm shadow-md p-8 md:p-12 mb-16 relative">
-            
             <svg class="absolute top-2 left-2 w-16 h-16 opacity-80 pointer-events-none" viewBox="0 0 100 100">
                 <path class="flower-stem" d="M10,10 C20,30 40,30 50,20" stroke-width="2" fill="none"/>
                 <circle class="flower-main" cx="15" cy="15" r="10"/>
@@ -62,7 +46,6 @@
                 <path class="flower-stem" d="M30,10 C40,20 40,40 30,50" stroke-width="2" fill="none"/>
                 <circle class="flower-main" cx="35" cy="10" r="8"/>
             </svg>
-
             <svg class="absolute bottom-2 right-2 w-16 h-16 opacity-80 pointer-events-none" viewBox="0 0 100 100">
                 <path class="flower-stem" d="M90,90 C80,70 60,70 50,80" stroke-width="2" fill="none"/>
                 <circle class="flower-main" cx="85" cy="85" r="10"/>
@@ -71,17 +54,17 @@
                 <circle class="flower-main" cx="65" cy="90" r="8"/>
             </svg>
             
-            <h2 id="story-title" class="text-3xl font-title text-gray-900 mb-2 relative z-10">The Day We Met The Rain</h2>
-            <div id="story-date" class="text-sm text-gray-400 mb-8 uppercase tracking-widest relative z-10">May 25, 2026</div>
+            <h2 class="text-3xl font-title text-gray-900 mb-2 relative z-10">The Day We Met The Rain</h2>
+            <div class="text-sm text-gray-400 mb-8 uppercase tracking-widest relative z-10">May 25, 2026</div>
             
-            <div id="story-content" class="max-w-none text-lg leading-relaxed text-gray-700 space-y-4 relative z-10 min-h-[150px]">
-                <p>Click "Edit" below to start writing your story directly on this page...</p>
-            </div>
-            
-            <div class="mt-8 pt-4 border-t border-gray-100 flex justify-end">
-                <button id="edit-btn" class="text-sm font-medium text-rose-500 hover:text-rose-700 transition-colors px-4 py-2 border border-rose-200 rounded hover:bg-rose-50">
-                    Edit Story
-                </button>
+            <div class="max-w-none text-lg leading-relaxed text-gray-700 space-y-4 relative z-10">
+                
+                <p>This is paragraph one of today's story.</p>
+                
+                <p>This is paragraph two. Notice how each paragraph needs a 'p' tag around it so the computer knows to create a space between the lines.</p>
+                
+                <p>I love you.</p>
+
             </div>
         </article>
 
@@ -90,83 +73,22 @@
             
             <a href="#" class="polaroid block cursor-pointer group">
                 <div class="bg-gray-100 aspect-[4/3] w-full mb-3 flex items-center justify-center overflow-hidden relative">
-                    <img src="https://via.placeholder.com/400x300.png?text=Our+Park+Walk" 
-                         alt="Our first walk in the park" 
-                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <img src="https://via.placeholder.com/400x300.png?text=Our+Park+Walk" alt="Our first walk in the park" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                     <div class="absolute inset-0 ring-1 ring-black/5 rounded-sm pointer-events-none"></div>
                 </div>
                 <h4 class="font-title text-center text-gray-800 text-lg">A Walk in the Park</h4>
                 <p class="text-xs text-center text-gray-500 mt-1">May 24, 2026</p>
             </a>
             
-             <a href="#" class="polaroid polaroid-alt block cursor-pointer group">
+            <a href="#" class="polaroid polaroid-alt block cursor-pointer group">
                 <div class="bg-gray-100 aspect-[4/3] w-full mb-3 flex items-center justify-center overflow-hidden relative">
-                    <img src="https://via.placeholder.com/400x300.png?text=Our+Coffee+Date" 
-                         alt="Coffee date and laughter" 
-                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <img src="https://via.placeholder.com/400x300.png?text=Our+Coffee+Date" alt="Coffee date and laughter" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                     <div class="absolute inset-0 ring-1 ring-black/5 rounded-sm pointer-events-none"></div>
                 </div>
                 <h4 class="font-title text-center text-gray-800 text-lg">Coffee and Silence</h4>
                 <p class="text-xs text-center text-gray-500 mt-1">May 23, 2026</p>
             </a>
-
         </div>
     </div>
-
-    <script>
-        const editBtn = document.getElementById('edit-btn');
-        const titleArea = document.getElementById('story-title');
-        const dateArea = document.getElementById('story-date');
-        const contentArea = document.getElementById('story-content');
-        
-        let isEditing = false;
-
-        // Load saved story from local storage when page opens
-        window.onload = () => {
-            if(localStorage.getItem('savedTitle')) titleArea.innerHTML = localStorage.getItem('savedTitle');
-            if(localStorage.getItem('savedDate')) dateArea.innerHTML = localStorage.getItem('savedDate');
-            if(localStorage.getItem('savedContent')) contentArea.innerHTML = localStorage.getItem('savedContent');
-        };
-
-        // Toggle Edit/Save Mode
-        editBtn.addEventListener('click', () => {
-            if (!isEditing) {
-                // Enter Edit Mode
-                isEditing = true;
-                editBtn.innerText = "Save Story";
-                editBtn.classList.replace('text-rose-500', 'text-white');
-                editBtn.classList.add('bg-rose-500', 'shadow-md');
-                
-                // Make text editable
-                titleArea.contentEditable = "true";
-                dateArea.contentEditable = "true";
-                contentArea.contentEditable = "true";
-                
-                // Add a soft background to show it's editable
-                contentArea.classList.add('bg-gray-50', 'p-4', 'rounded-md', 'border', 'border-gray-200');
-                
-                contentArea.focus();
-            } else {
-                // Save and Exit Edit Mode
-                isEditing = false;
-                editBtn.innerText = "Edit Story";
-                editBtn.classList.replace('text-white', 'text-rose-500');
-                editBtn.classList.remove('bg-rose-500', 'shadow-md');
-                
-                // Turn off editable
-                titleArea.contentEditable = "false";
-                dateArea.contentEditable = "false";
-                contentArea.contentEditable = "false";
-                
-                // Remove editing background
-                contentArea.classList.remove('bg-gray-50', 'p-4', 'rounded-md', 'border', 'border-gray-200');
-                
-                // Save to browser Local Storage
-                localStorage.setItem('savedTitle', titleArea.innerHTML);
-                localStorage.setItem('savedDate', dateArea.innerHTML);
-                localStorage.setItem('savedContent', contentArea.innerHTML);
-            }
-        });
-    </script>
 </body>
 </html>
